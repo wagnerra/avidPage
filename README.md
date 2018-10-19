@@ -1,6 +1,6 @@
 # SW Devel Challenge - Central Web Server
 
-Web Server 
+Web Server (HTML + Javascript + Canvas)
 
 ### Installation
 
@@ -14,7 +14,15 @@ http-server -p 9000
 
 ### Testing
 
-Open http://localhost:9000 on Web Browser
+Please take a look on these 3 video recorded tests:
+- http://wcramos.com/files/challenges/map1_video.mp4
+- http://wcramos.com/files/challenges/map2_video.mp4
+- http://wcramos.com/files/challenges/map3_video.mp4
+
+To test yourself:
+
+- Start the 3 servers.
+- Open http://localhost:9000 on Web Browser
 
 First you need to select one Robot:
 

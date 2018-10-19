@@ -164,6 +164,21 @@ $(function () {
         ctx.lineTo(10 + j*spaceWeight, 10 + i*spaceHeight + spaceHeight)
         ctx.lineTo(10 + j*spaceWeight, 10 + i*spaceHeight)
         ctx.fill();   
+
+        if (json.cleaned === json.spacesToClean) {
+           ctx.beginPath();
+           ctx.fillStyle = 'red';
+           ctx.font = '18px serif';
+           ctx.fillText('Clean job summary', 420, 20);
+           ctx.fillStyle = 'black';
+           ctx.font = '14px serif';
+           let totalTime = Math.trunc((json.timestamp - json.startedTimestamp)/1000);
+           ctx.fillText('Elapsed time: ' + totalTime + ' s', 420, 40);
+           ctx.fillText('Cleaned area: ' + json.cleaned + ' m2', 420, 60);
+           ctx.fillText('Productivity: ' + (json.cleaned / totalTime).toFixed(2) + ' m2/s', 420, 80);
+           ctx.fillText('Distance: ' + json.cleaningStep + ' m', 420, 100);
+           ctx.fillText('Eficiency: ' + (100*(json.cleaned / json.cleaningStep).toFixed(4)) + ' %', 420, 120);
+        }
       }
     }
 
